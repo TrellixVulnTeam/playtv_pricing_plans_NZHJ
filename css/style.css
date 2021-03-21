@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -11,3 +12,51 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem; }
+
+.card {
+  background-color: #fff;
+  height: auto;
+  width: 20%;
+  text-align: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 2rem 2rem rgba(34, 34, 34, 0.3);
+  perspective: 150rem;
+  transition: all 0.8s; }
+  .card__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__heading--span {
+      font-weight: 700;
+      font-size: 4rem;
+      color: #fff; }
+    .card__heading--1 {
+      background-image: linear-gradient(to right bottom, #6dd5ed, #2193b0); }
+    .card__heading--2 {
+      background-image: linear-gradient(to right bottom, #ef473a, #cb2d3e); }
+    .card__heading--3 {
+      background-image: linear-gradient(to right bottom, #a044ff, #6a3093); }
+  .card__text {
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 2rem; }
+    .card__text ul {
+      list-style: none; }
+      .card__text ul li {
+        padding: 1rem 0; }
+        .card__text ul li:not(:last-child) {
+          border-bottom: 0.3rem #2222 solid; }
+  .card:hover {
+    transform: rotateY(180deg); }
+
+.plans {
+  height: 90vh;
+  background-color: #f8f8f8;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }

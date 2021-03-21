@@ -1,0 +1,71 @@
+.card {
+	background-color: $color-white;
+	height: auto;
+	width: 20%;
+	text-align: center;
+	border-radius: 2rem;
+	overflow: hidden;
+	box-shadow: 0 2rem 2rem rgba($color-text, 0.3);
+	perspective: 150rem;
+	transition: all 0.8s;
+
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 10rem;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+		&--span {
+			font-weight: 700;
+			font-size: 4rem;
+			color: $color-white;
+		}
+
+		&--1 {
+			background-image: linear-gradient(
+				to right bottom,
+				$color-primary-light,
+				$color-primary-dark
+			);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+				to right bottom,
+				$color-secondary-light,
+				$color-secondary-dark
+			);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+				to right bottom,
+				$color-tertiary-light,
+				$color-tertiary-dark
+			);
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 2rem;
+		padding: 2rem;
+
+		ul {
+			list-style: none;
+
+			li {
+				padding: 1rem 0;
+				&:not(:last-child) {
+					border-bottom: 0.3rem $color-text solid;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		transform: rotateY(180deg);
+	}
+}
